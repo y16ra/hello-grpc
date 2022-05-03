@@ -6,13 +6,13 @@ option go_package = "github.com/hello-grpc/hello";
 
 service Greeter {
     // Sends a greeting
-    rpc SayHello(SayHelloRequest) returns (SayHelloResponse) {}
+    rpc SayHello(SayHelloRequest) returns (SayHelloReply) {}
 }
 
 message SayHelloRequest {
-    int32 name = 1;
+    string name = 1;
 }
 
-message SayHelloResponse {
+message SayHelloReply {
     string message = 1;
 }
