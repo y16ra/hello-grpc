@@ -19,9 +19,9 @@ type server struct {
 	hello.UnimplementedGreeterServer
 }
 
-func (s *server) SayHello(ctx context.Context, in *hello.HelloRequest) (*hello.HelloReply, error) {
+func (s *server) SayHello(ctx context.Context, in *hello.SayHelloRequest) (*hello.SayHelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
-	return &hello.HelloReply{Message: "Hello " + in.GetName()}, nil
+	return &hello.SayHelloReply{Message: "Hello " + in.GetName()}, nil
 }
 
 func main() {
