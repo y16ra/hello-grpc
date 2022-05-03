@@ -10,7 +10,7 @@ service Greeter {
 }
 
 message SayHelloRequest {
-    string name = 1;
+    int32 name = 1;
 }
 
 message SayHelloReply {
